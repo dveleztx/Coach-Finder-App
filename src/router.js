@@ -21,15 +21,11 @@ const router = createRouter({
     {
       path: '/coaches/:id',
       component: CoachDetails,
-      children: [{ path: 'contact', component: null }], // /coaches/c1/contact
+      children: [{ path: 'contact', component: ContactCoach }], // /coaches/c1/contact
     },
     {
       path: '/register',
       component: CoachRegistration,
-    },
-    {
-      path: '/contact',
-      component: ContactCoach,
     },
     {
       path: '/requests',
