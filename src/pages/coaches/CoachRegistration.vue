@@ -14,11 +14,7 @@ export default {
   components: {
     CoachForm,
   },
-  computed: {
-    isCoach() {
-      return this.$store.getters['coaches/isCoach'];
-    },
-  },
+
   methods: {
     saveData(data) {
       this.$store.dispatch('coaches/registerCoach', data);
