@@ -10,6 +10,7 @@ const store = createStore({
   },
   state() {
     return {
+      dbUrl: process.env.DB_URL,
       userId: 'c3',
     };
   },
