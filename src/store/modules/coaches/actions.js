@@ -9,10 +9,11 @@ export default {
       areas: data.areas,
     };
 
+    const token = context.rootGetters.token;
     const url = process.env.VUE_APP_DB_URL;
 
     const response = await fetch(
-      `${url}/coaches/${userId}.json`,
+      `${url}/coaches/${userId}.json?auth=${token}`,
       {
         method: 'PUT',
         body: JSON.stringify(coachData),
